@@ -10,11 +10,16 @@
                 size: self.size
         orientation:"horizontal"
         Label:
-            size_hint:1,1
-            text:"Sample"
-        Label:
-            size_hint:1,1
+            size_hint:1,0.5
+            canvas.before:
+                Color:
+                    rgba: 1, 1,0,1
+                Rectangle:
+                    pos:self.pos
+                    size:self.size
             text:root.name
+            color:1, 0, 0, 1
         Label:
             size_hint:1,1
             text:root.name_2
+            color:0, 0, 1, 1
