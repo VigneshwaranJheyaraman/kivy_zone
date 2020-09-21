@@ -13,6 +13,12 @@
     name:"main"
     BoxLayout:
         orientation:root.ort
+        canvas.before:
+            Color:
+                rgb:[0,1,1]
+            Rectangle:
+                size:self.size
+                pos:self.pos
         SimpleLabel:
             text:'Bye'
             clr:1,0,0
@@ -20,6 +26,10 @@
         SimpleLabel:
             text:"Hi"
             on_press: root.change_screen("main")
+        SimpleLabelFunc:
+            text:'Function hi' if self.hi else 'Function Bye'
+        Label:
+            text:"Bye"
 
 <SimpleScreen>:
     SimpleWidget:

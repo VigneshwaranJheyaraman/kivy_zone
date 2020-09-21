@@ -6,7 +6,8 @@ from kivyredux.reducers import Reducer
 s = State(hi=False)
 def red(action, state=s):
     if action.type == "hi":
-        state.update('hi', not state.get('hi'))
+        pv = state.get('hi')
+        state.update('hi', not pv)
     else:
         pass
     return state
